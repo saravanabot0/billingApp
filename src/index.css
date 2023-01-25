@@ -1,0 +1,363 @@
+body {
+  /* background-color: #ffbfd3; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #383A56;
+}
+::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 5rem;
+}
+
+.cursorPointer {
+cursor: pointer;
+}
+.blackColor {
+  color: black!important;
+}
+
+.colorWhite {
+  color: #fff;
+}
+.tastyColor {
+  color: #FF4C29;
+}
+.App {
+  position: relative;
+}
+.header {
+  background-color: #383A56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.companyName {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  /* word-spacing: .5rem; */
+  letter-spacing: .5rem;
+  padding-left: 1rem;
+}
+.icon {
+  font-size: 1.5rem;
+}
+.billingIcon {
+  position: relative;
+  margin-left: 1.5rem;
+  margin-right: 2rem;
+}
+.ordered {
+  position: absolute;
+  font-size: .8rem;
+  font-weight: bolder;
+  background-color: #FF4C29;
+  padding: .1rem .4rem;
+  border-radius: 50%;
+  bottom: 1.2rem;
+  left: .9rem;
+  transition: 0.3s;
+}
+.searchBox {
+  position: fixed;
+  top: 1rem;
+  right: 8rem;
+  width: 25%;
+  padding: .5rem 1rem;
+  overflow: hidden;
+  border-radius: .3rem;
+  background-color: #fff;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: .5rem;
+  border: 0;
+  transition: 0.5s;
+}
+.showSearchBox {
+  opacity: 1;
+}
+.hideSearchBox {
+  /* display: contents; */
+  opacity: 0;
+}
+
+/* Product List Styles Here */
+.listOfItems {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  /* The 1fr is what tells the browser to distribute the space between the 
+  columns so that each column equally gets one fraction of that space. 
+  That is, they’re all fluid, equal-width columns. */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: .9rem;
+  padding: 5.3rem 1rem 1rem;
+}
+.individualProduct {
+  position: relative;
+  height: 15rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.individualProduct img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.dessertName {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: 0;
+  padding: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 92%;
+  min-height: 3rem;
+  max-height: 3rem;
+  font-size: 1.2rem;
+  letter-spacing: .5rem;
+  font-weight: 500;
+}
+
+/* BillingDetails Page Styles  */
+
+.showBillingPage {
+  width: 25%;
+  
+}
+.hideBillingPage {
+  width: 0;
+}
+
+.billingDetailPage {
+  position: fixed;
+  background-color: #FF4C29;
+  top: 4.4rem;
+  min-height: 90vh;
+  /* width: 0; */
+  right: 0;
+  /* padding: 1.5rem; */
+ transition: 0.5s;
+  /* display: none;
+  transform: translateX(100%); */
+  overflow-x: hidden;
+}
+.insideBillingPage {
+  position: relative;
+ /* background-color: aqua; */
+ min-height: 86vh;
+ transition: 0.1s;
+}
+.showBillContent {
+  opacity: 1;
+}
+.HideBillContent {
+  opacity: 0;
+}
+.billHeading {
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.buttonContainer a {
+  display: flex;
+  justify-content: center;
+}
+.saveBillButton {
+  position: absolute;
+  bottom: 0;
+  background-color:#383A56;
+  border: none;
+  padding: .7rem 1rem;
+  border-radius: .5rem;
+  font-size: 1.1rem;
+}
+.orderItems {
+  opacity: 1;
+}
+.hideItems {
+  opacity: 0;
+}
+.outerProductPrice {
+ /* background-color: aquamarine;  */
+ max-height: 26rem;
+ overflow-x: auto;
+ margin: 0rem 1rem;
+}
+.outerProductPrice::-webkit-scrollbar {
+  width: .2rem;
+}
+.outerProductPrice::-webkit-scrollbar-track {
+  background-color: #FF4C29;
+}
+.outerProductPrice::-webkit-scrollbar-thumb {
+  background-color: #383A56;
+  border-radius: 5rem;
+}
+
+.productPrice {
+  display: flex;
+  justify-content:space-between;
+  padding: .5rem 1.5rem;
+  font-size: 1.1rem;
+  /* background-color: aqua; */
+  /* height: 100%; */
+  /* font-weight: 500; */
+}
+.productName {
+  width: 30%;
+}
+hr.horizontalLine {
+  width: 90%;
+  border: 0;
+  border-top: 1px solid #fff;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem 1.5rem;
+  margin: 0rem 1rem;
+  /* background-color: aqua; */
+}
+
+.hideCustomer {
+  opacity: 0;
+}
+.billBackground {
+  background-color: #FF4C29;
+}
+.savePDFBill {
+  position: relative;
+}
+.watermark {
+  position: absolute;
+  top: 15rem;
+  color: lightgray;
+  opacity: .5;
+}
+
+
+/*--------------------- Media Queries ----------------------*/
+@media screen and (max-width:600px) {
+  .header {
+    padding: 1rem 0rem;
+  }
+  .iconBox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 0.7rem;
+    margin-top: 0.6rem;
+  }
+  .icon {
+    font-size: 1.3rem;
+  }
+  .ordered {
+    font-size: .7rem;
+    bottom: 1.1rem;
+    left: .7rem;
+  }
+  .listOfItems {
+    padding: 7.6rem .8rem 1rem;
+  }
+  .billingDetailPage {
+    top: 6.4rem;
+    min-height: 90vh;
+    right: 0;
+    padding: 0;
+  }
+  .showBillingPage {
+    width: 100%;
+    
+  }
+  .hideBillingPage {
+    width: 0;
+  }
+  .insideBillingPage {
+   min-height: 80vh;
+  }
+  .outerProductPrice {
+    /* background-color: aquamarine;  */
+    max-height: 22rem;
+    overflow-x: auto;
+    margin: 0rem 1rem;
+   }
+   .saveBillButton {
+    font-size: 1rem;
+  }
+  .searchBox {
+    background-color:#fff;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+  }
+  /* .searchBox::placeholder {
+    color: #fff;
+  } */
+}
+
+
+@media screen and (max-width:375px) {
+  .listOfItems {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: .8rem;
+    padding: 7.6rem .7rem 1rem;
+  }
+  .saveBillButton {
+    font-size: .9rem;
+  }
+}
+@media only screen and (min-width:600px) and (max-width:1020px) {
+  .showBillingPage {
+    width: 48%;
+    
+  }
+  .outerProductPrice {
+    max-height: 22rem;
+  }
+  .searchBox {
+    width: 32%;
+  }
+}
+@media only screen and (min-width:1020px) and (max-width:1440px) {
+  .showBillingPage {
+    width: 40%;
+    
+  }
+  .outerProductPrice {
+    max-height: 22rem;
+  }
+  .searchBox {
+    width: 33%;
+  }
+}

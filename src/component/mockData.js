@@ -199,7 +199,7 @@ const productDetails = {
             "product_id": "016",
             "name":"Strawberry Mousse",
             "visibility":"visible",
-            "price":100,
+            "price":1000,
             "inventory": 10,
             "available":true,
             "image": [

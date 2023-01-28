@@ -28,6 +28,7 @@ function ProductList(props) {
         <div className={`listOfItems`}>
             {searchProducts.map((item,index)=>
             <div key={index} className={`individualProduct cursorPointer`}>
+                <p className='desertPrice blackColor'> &#x20B9;{item.price} </p>
                 <img src={item.image[0].url} alt="products" className='' onClick={()=>clickedDessert(item)}/>
                 <p className='dessertName colorWhite'> {item.name} </p>
             </div>

@@ -105,20 +105,20 @@ cursor: pointer;
 
 /* Product List Styles Here */
 .listOfItems {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  /* display: grid; */
   /* The 1fr is what tells the browser to distribute the space between the 
   columns so that each column equally gets one fraction of that space. 
   That is, they’re all fluid, equal-width columns. */
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
   gap: .9rem;
   padding: 5.3rem 1rem 1rem;
 }
 .individualProduct {
   position: relative;
   height: 15rem;
-  width: 100%;
+  width: 24.2%;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -142,6 +142,27 @@ cursor: pointer;
   font-size: 1.2rem;
   letter-spacing: .5rem;
   font-weight: 500;
+}
+.desertPrice {
+  position: absolute;
+  /* top: -.8rem;
+  left: -1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: #fff;
+  /* width: 100%; */
+  /* border-radius: 50%; */
+  /* padding: 1rem; */
+  height: 2.5rem;
+  width: 7rem;
+  font-size: 1.2rem;
+  letter-spacing: .5rem;
+  font-weight: 500;
+  border-bottom-right-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* BillingDetails Page Styles  */
@@ -324,6 +345,13 @@ hr.horizontalLine {
   /* .searchBox::placeholder {
     color: #fff;
   } */
+  
+}
+
+@media screen and (max-width:685px) {
+  .individualProduct {
+    width: 100%;
+  }
 }
 
 
@@ -335,6 +363,16 @@ hr.horizontalLine {
   }
   .saveBillButton {
     font-size: .9rem;
+  }
+}
+@media only screen and (min-width:685px) and (max-width:750px) {
+  .individualProduct {
+    width: 48.9%;
+  }
+}
+@media only screen and (min-width:750px) and (max-width:1020px) {
+  .individualProduct {
+    width: 32%;
   }
 }
 @media only screen and (min-width:600px) and (max-width:1020px) {
@@ -359,5 +397,8 @@ hr.horizontalLine {
   }
   .searchBox {
     width: 33%;
+  }
+  .individualProduct {
+    width: 23.9%;
   }
 }
